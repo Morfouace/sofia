@@ -460,7 +460,7 @@ void R3BSofToFWOnlineSpectra::Exec(Option_t* option)
             {
                 fh2_mult[j]->Fill(i + 1, mult[i * NbChs + j]);
             }
-            if ((mult[iDet * NbChs] == 1) && (mult[iDet * NbChs + 1] == 1))
+            if ((mult[i * NbChs] == 1) && (mult[i * NbChs + 1] == 1))
             {
                 fh1_RawPos_AtTcalMult1[i]->Fill((Float_t)(iRawTimeNs[i * 2] - iRawTimeNs[i * 2 + 1]));
                 if (TrawStart != -1000000.)
