@@ -41,13 +41,13 @@ void main_online()
     const Int_t expId = 444; // select experiment: 444 or 467
 
     // Create input -----------------------------------------
-    TString filename = "--stream=lxlanddaq01:9000";
+    //TString filename = "--stream=lxlanddaq01:9000";
     //TString filename = "--stream=lxir123:7803";
     //TString filename = "~/lmd/sofia2019/main0079_0001.lmd";
     //TString filename = "~/lmd/sofia2020/neu.lmd";
     //TString filename = "/lustre/land/202002_s444/lustre/r3b/202002_s444/main0013_0001.lmd";
     //TString filename = "/lustre/land/202002_s444/stitched/main0076_0001.lmd";
-    //TString filename = "/media/audrey/COURGE/SOFIA/ANALYSE/SOFIA3/data/202002_eng/main0073_0001.lmd";
+    TString filename = "/media/pierre/proton/sofia/s444/data/main0146_0001.lmd";
 
     // Output file ------------------------------------------
     TString outputFileName = "data_s444_online.root";
@@ -65,7 +65,7 @@ void main_online()
     TString ucesb_dir = getenv("UCESB_DIR");
     //TString upexps_dir = ucesb_dir + "/../upexps/";
     //TString upexps_dir = "/u/land/lynx.landexp/202002_s444/upexps/"; //for lxg computers
-    TString upexps_dir = "/u/land/fake_cvmfs/upexps"; //for lxlandana computers
+    TString upexps_dir = "/home/pierre/Physics/fair_install/upexps";
     TString ucesb_path;
     if (expId == 444)
     {
@@ -88,14 +88,14 @@ void main_online()
     Bool_t fMusic = true;    // R3B-Music: Ionization chamber for charge-Z
     Bool_t fSci = true;      // Start: Plastic scintillator for ToF
     Bool_t fAms = false;     // AMS tracking detectors
-    Bool_t fCalifa = true;   // Califa calorimeter
+    Bool_t fCalifa = false;   // Califa calorimeter
     Bool_t fMwpc1 = true;    // MWPC1 for tracking of fragments in front of target
     Bool_t fMwpc2 = true;    // MWPC2 for tracking of fragments before GLAD
     Bool_t fTwim = true;     // Twim: Ionization chamber for charge-Z of fragments
     Bool_t fMwpc3 = true;    // MWPC3 for tracking of fragments behind GLAD
     Bool_t fTofW = true;     // ToF-Wall for time-of-flight of fragments behind GLAD
     Bool_t fScalers = true;  // SIS3820 scalers at Cave C
-    Bool_t fNeuland = true;  // NeuLAND for neutrons behind GLAD
+    Bool_t fNeuland = false;  // NeuLAND for neutrons behind GLAD
     Bool_t fTracking = true; // Tracking of fragments inside GLAD
 
     // Calibration files ------------------------------------
